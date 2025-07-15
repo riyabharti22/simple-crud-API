@@ -1,0 +1,76 @@
+<%- include('layout/header') %>
+
+<style>
+  body {
+    background: rgb(206, 201, 203);
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+  }
+
+  .contact-card {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-card:hover {
+    transform: scale(1.01);
+  }
+
+  .contact-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  .form-label {
+    font-weight: 600;
+  }
+
+  .btn-contact {
+    background-color: #4b2e2e;
+    color: white;
+    font-weight: 500;
+  }
+
+  .btn-contact:hover {
+    background-color: #3a2222;
+  }
+
+</style>
+
+<div class="container contact-container">
+  <div class="contact-card">
+    <h2 class="contact-title">Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..." required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-contact px-4 py-2">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('layout/footer') %>
